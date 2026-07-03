@@ -1,0 +1,30 @@
+[data-theme="dark"] {
+  body {
+    background: #020617;
+    color: #f8fafc;
+  }
+
+  #app,
+  .page-section,
+  .stat-card,
+  .chart-container,
+  .financial-score,
+  .quick-action-btn {
+    background: #111827;
+    color: #f8fafc;
+    border-color: #334155;
+  }
+
+  #sidebar {
+    background: #020617;
+  }
+
+  .nav-item {
+    color: rgba(248, 250, 252, 0.75);
+  }
+
+  .nav-item:hover,
+  .nav-item.active {
+    color: #ffffff;
+  }
+}

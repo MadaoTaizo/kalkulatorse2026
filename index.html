@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Business Management System</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon">📊</div>
+                <span class="brand-text">FinBiz</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-page="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-page="usaha">
+                    <span class="nav-icon">🏢</span>
+                    <span class="nav-text">Usaha</span>
+                </a>
+                <a href="#" class="nav-item" data-page="pengeluaran">
+                    <span class="nav-icon">📉</span>
+                    <span class="nav-text">Pengeluaran</span>
+                </a>
+                <a href="#" class="nav-item" data-page="pemasukan">
+                    <span class="nav-icon">📈</span>
+                    <span class="nav-text">Pemasukan</span>
+                </a>
+                <a href="#" class="nav-item" data-page="keluarga">
+                    <span class="nav-icon">👨‍👩‍👧‍👦</span>
+                    <span class="nav-text">Keluarga</span>
+                </a>
+                <a href="#" class="nav-item" data-page="analisa">
+                    <span class="nav-icon">🔍</span>
+                    <span class="nav-text">Analisa</span>
+                </a>
+                <a href="#" class="nav-item" data-page="laporan">
+                    <span class="nav-icon">📄</span>
+                    <span class="nav-text">Laporan</span>
+                </a>
+                <a href="#" class="nav-item" data-page="pengaturan">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Pengaturan</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="themeToggle" class="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Navbar -->
+            <header id="navbar">
+                <div class="navbar-left">
+                    <button id="sidebarToggle" class="sidebar-toggle">
+                        <span class="toggle-icon">☰</span>
+                    </button>
+                    <h1 class="page-title" id="pageTitle">Dashboard</h1>
+                </div>
+                <div class="navbar-right">
+                    <button class="nav-btn" id="exportBtn" title="Export">
+                        <span class="icon">📤</span>
+                    </button>
+                    <button class="nav-btn" id="notificationBtn" title="Notifications">
+                        <span class="icon">🔔</span>
+                        <span class="badge">3</span>
+                    </button>
+                    <div class="user-profile">
+                        <span class="avatar">👤</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Container -->
+            <div id="page-container">
+                <!-- Pages will be loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Vendor -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- JavaScript Modules -->
+    <script type="module">
+        import { App } from './assets/js/app.js';
+        
+        // Initialize App
+        const app = new App();
+        app.init();
+        
+        // Expose for global access
+        window.app = app;
+        window.navigate = (page) => app.modules.router.loadPage(page);
+    </script>
+</body>
+</html>
