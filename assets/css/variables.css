@@ -3,18 +3,26 @@
     --primary: #2563EB;
     --primary-dark: #1D4ED8;
     --primary-light: #3B82F6;
+    --primary-lighter: #DBEAFE;
     --success: #10B981;
     --success-dark: #059669;
+    --success-light: #D1FAE5;
     --danger: #EF4444;
     --danger-dark: #DC2626;
+    --danger-light: #FEE2E2;
     --warning: #F59E0B;
     --warning-dark: #D97706;
+    --warning-light: #FEF3C7;
     --info: #6366F1;
+    --info-light: #E0E7FF;
+    --secondary: #8B5CF6;
+    --secondary-light: #EDE9FE;
     
     --bg-primary: #F8FAFC;
     --bg-secondary: #FFFFFF;
     --bg-card: #FFFFFF;
     --bg-sidebar: #1E293B;
+    --bg-tertiary: #F1F5F9;
     
     --text-primary: #0F172A;
     --text-secondary: #475569;
@@ -22,10 +30,12 @@
     --text-light: #F8FAFC;
     
     --border: #E2E8F0;
+    --border-light: #F1F5F9;
     --shadow: 0 1px 3px rgba(0,0,0,0.1);
     --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
     --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
     --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+    --shadow-2xl: 0 25px 50px rgba(0,0,0,0.15);
     
     /* Spacing */
     --sidebar-width: 260px;
@@ -34,6 +44,13 @@
     
     /* Font */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 24px;
+    --font-size-3xl: 30px;
     
     /* Border Radius */
     --radius-sm: 6px;
@@ -43,6 +60,7 @@
     
     /* Transitions */
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Dark Mode Variables */
@@ -51,11 +69,20 @@
     --bg-secondary: #1E293B;
     --bg-card: #1E293B;
     --bg-sidebar: #0F172A;
+    --bg-tertiary: #334155;
     --text-primary: #F8FAFC;
     --text-secondary: #CBD5E1;
     --text-muted: #64748B;
     --border: #334155;
+    --border-light: #475569;
     --shadow: 0 1px 3px rgba(0,0,0,0.3);
     --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
     --shadow-lg: 0 10px 15px rgba(0,0,0,0.3);
+    --shadow-xl: 0 20px 25px rgba(0,0,0,0.3);
+    --primary-lighter: #1E3A8A;
+    --success-light: #064E3B;
+    --danger-light: #7F1D1D;
+    --warning-light: #78350F;
+    --info-light: #312E81;
+    --secondary-light: #4C1D95;
 }
