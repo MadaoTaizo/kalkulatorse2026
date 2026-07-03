@@ -37,7 +37,6 @@
     transition: all var(--transition-fast);
     min-width: 44px;
     min-height: 44px;
-    display: flex;
     align-items: center;
     justify-content: center;
     user-select: none;
