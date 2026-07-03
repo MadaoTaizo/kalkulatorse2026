@@ -65,9 +65,11 @@ export class App {
         const sidebarToggle = document.getElementById('sidebarToggle');
         const sidebar = document.getElementById('sidebar');
         const overlay = document.querySelector('.sidebar-overlay');
+        const navItems = document.querySelectorAll('.nav-item');
 
         if (sidebarToggle && sidebar) {
-            sidebarToggle.addEventListener('click', () => {
+            sidebarToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
                 sidebar.classList.toggle('active');
                 if (overlay) overlay.classList.toggle('active');
             });
@@ -78,6 +80,24 @@ export class App {
                     overlay.classList.remove('active');
                 });
             }
+
+            // Close sidebar when nav item is clicked
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    if (window.innerWidth <= 992) {
+                        sidebar.classList.remove('active');
+                        if (overlay) overlay.classList.remove('active');
+                    }
+                });
+            });
+
+            // Close sidebar on window resize (if resize to desktop)
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 992) {
+                    sidebar.classList.remove('active');
+                    if (overlay) overlay.classList.remove('active');
+                }
+            });
         }
 
         const themeToggle = document.getElementById('themeToggle');
@@ -101,6 +121,11 @@ export class App {
             }
 
             if (e.key === 'Escape') {
+                // Close sidebar on Escape
+                if (sidebar && sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                    if (overlay) overlay.classList.remove('active');
+                }
                 this.modules.ui.closeAllModals();
             }
         });
